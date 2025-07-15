@@ -3,70 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Morlov Shop</title>
+    <title>Verizon RP</title>
     <style>
+        /* Общие стили для адаптивности и красоты */
         body {
-            background-image: url('сайт/i1/fon.jpg'); /* Замените на URL вашего изображения */
-            background-size: cover;
-            background-repeat: no-repeat;
             font-family: sans-serif;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            background-color: #f0f0f0;
         }
-
         .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
         }
-
-        .product-card {
-            width: 200px; /* Ширина карточки товара */
-            margin: 10px;
-            padding: 10px;
-            background-color: rgba(255, 255, 255, 0.8); /* Белый фон с прозрачностью */
+        /* Стили для изображения и кнопки */
+        .header {
+            position: relative;
             text-align: center;
-            transition: transform 0.3s ease; /* Анимация при наведении */
         }
-
-        .product-card:hover {
-            transform: scale(1.05); /* Увеличение при наведении */
+        .header img {
+            width: 100%; /* Адаптивное изображение */
+            max-height: 500px;
+            object-fit: cover; /* Чтобы изображение не искажалось */
         }
-
-        .buy-button {
-            background-color: orange;
-            color: white;
-            padding: 10px 20px;
+        .header .button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: yellow;
+            color: black;
+            padding: 15px 30px;
             border: none;
+            border-radius: 25px;
             cursor: pointer;
-            transition: transform 0.3s ease; /* Анимация при наведении */
-            display: inline-block;
-            text-decoration: none; /* Убираем подчеркивание ссылки */
+            font-size: 1.2em;
+            transition: transform 0.3s ease; /* Плавное увеличение */
         }
-
-        .buy-button:hover {
-            transform: scale(1.1); /* Увеличение при наведении */
+        .header .button:hover {
+            transform: translate(-50%, -50%) scale(1.1); /* Увеличение при наведении */
         }
-
-        /* Адаптация для мобильных устройств */
-        max-width: 600px {
-            .product-card {
-                width: 90%; /* Карточки занимают всю ширину экрана на мобильных устройствах */
+        /* Стили для описания проекта */
+        .description {
+            background-image: url('ваш_фон.jpg'); /* Замените на URL вашего фона */
+            background-size: cover;
+            color: white;
+            padding: 50px;
+            text-align: center;
+        }
+        /* Стили для нижней кнопки */
+        .download-button {
+            background-color: yellow;
+            color: black;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: transform 0.3s ease;
+            display: block;
+            margin: 20px auto;
+            width: fit-content;
+        }
+        .download-button:hover {
+            transform: scale(1.1);
+        }
+        /* Адаптация под мобильные */
+        max-width: 768px {
+            .container {
+                padding: 10px;
+            }
+            .description {
+                padding: 20px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Пример карточки товара (повторите 30 раз) -->
-        <div class="product-card">
-            <img src="сайт/i1/k1lpk.jpg" alt="Product" width="150"> <!-- Замените на URL изображения товара -->
-            <h3>Лаунчер ПК</h3>
-            <p>Описание товара</p>
-            <a href="https://example.com/product1" class="buy-button">Купить</a> <!-- Замените ссылку -->
+        <div class="header">
+            <img src="ваше_изображение.jpg" alt="Ваше изображение">
+            <a href="#footer"><button class="button">Начать Играть</button></a>
         </div>
-        <!-- Повторите этот блок 29 раз для остальных товаров -->
+        <div class="description">
+            <h2>О проекте КРМП</h2>
+            <p>Тут описание вашего проекта...</p>
+        </div>
+        <footer id="footer">
+            <a href="ссылка_на_лаунчер"><button class="download-button">Скачать лаунчер</button></a>
+        </footer>
     </div>
 </body>
 </html>
