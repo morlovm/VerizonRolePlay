@@ -3,39 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zane Rusia</title>
+    <title>Morlov Shop</title>
     <style>
-        /* Стили для кнопки */
-        .button {
-            background-color: orange; /* Оранжевый цвет */
-            color: white; /* Белый текст */
-            padding: 15px 32px; /* Отступы */
-            text-align: center; /* Выравнивание текста по центру */
-            text-decoration: none; /* Убрать подчеркивание */
-            display: inline-block; /* Отображать как строчный элемент */
-            font-size: 20px; /* Размер шрифта */
-            cursor: pointer; /* Курсор-указатель при наведении */
-            border: none; /* Убрать рамку */
-            border-radius: 5px; /* Скругление углов */
+        body {
+            background-image: url('your-image.jpg'); /* Замените на URL вашего изображения */
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
         }
-        /* Стили для контейнера */
+
         .container {
-            text-align: center; /* Выравнивание по центру */
-            margin-top: 50px; /* Отступ сверху */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .product-card {
+            width: 200px; /* Ширина карточки товара */
+            margin: 10px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.8); /* Белый фон с прозрачностью */
+            text-align: center;
+            transition: transform 0.3s ease; /* Анимация при наведении */
+        }
+
+        .product-card:hover {
+            transform: scale(1.05); /* Увеличение при наведении */
+        }
+
+        .buy-button {
+            background-color: orange;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s ease; /* Анимация при наведении */
+            display: inline-block;
+            text-decoration: none; /* Убираем подчеркивание ссылки */
+        }
+
+        .buy-button:hover {
+            transform: scale(1.1); /* Увеличение при наведении */
+        }
+
+        /* Адаптация для мобильных устройств */
+        max-width: 600px {
+            .product-card {
+                width: 90%; /* Карточки занимают всю ширину экрана на мобильных устройствах */
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="сайт/i1/bf1.png" alt="Картинка проекта" width="500">
-        
-
-        <a href="https://example.com" class="button">Начать играть</a>
-        <p>
-            Описание вашего проекта. Здесь вы можете рассказать о вашем проекте,
-            его целях и задачах. Добавьте интересные детали и особенности, чтобы
-            привлечь внимание пользователей.
-        </p>
+        <!-- Пример карточки товара (повторите 30 раз) -->
+        <div class="product-card">
+            <img src="product-image.jpg" alt="Product" width="150"> <!-- Замените на URL изображения товара -->
+            <h3>Лаунчер ПК</h3>
+            <p>Описание товара</p>
+            <a href="https://example.com/product1" class="buy-button">Купить</a> <!-- Замените ссылку -->
+        </div>
+        <!-- Повторите этот блок 29 раз для остальных товаров -->
     </div>
 </body>
 </html>
