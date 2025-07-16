@@ -3,6 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Верхняя панель навигации</title>
+    <style>
+        /* Общие стили для панели навигации */
+        .navbar {
+            position: fixed; /* Фиксированное положение */
+            top: 0; /* Прикрепить к верху страницы */
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.2); /* Стеклянный эффект */
+            padding: 10px 0;
+            border-radius: 0 0 10px 10px; /* Закругленные уголки */
+            z-index: 100; /* Обеспечивает отображение поверх другого контента */
+            display: flex; /* Используем flexbox для расположения элементов */
+            justify-content: space-around; /* Равномерное распределение пространства между элементами */
+            align-items: center; /* Выравнивание элементов по вертикали */
+        }
+
+        /* Стили для ссылок */
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.3s ease; /* Плавный эффект при наведении */
+        }
+
+        /* Стили при наведении */
+        .navbar a:hover {
+            color: red;
+            transform: scale(1.2); /* Увеличение размера */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="#footer">Скачать лаунчер</a> <!-- Ссылка на футер -->
+        <a href="https://example.com/forum">Форум</a> <!-- Ссылка на форум -->
+        <a href="https://example.com/donate">Донат</a> <!-- Ссылка на донат -->
+    </div>
     <title>Verizon RP</title>
     <style>
         /* Общие стили для адаптивности и красоты */
